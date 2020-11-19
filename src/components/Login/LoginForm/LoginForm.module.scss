@@ -1,0 +1,25 @@
+
+
+.loginForm input {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 18px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #979797;
+  background: transparent;
+  color: #f2f2f2;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 48px;
+
+  & a {
+    color: #f2f2f2;
+    font-size: 14px;
+  }
+}

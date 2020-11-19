@@ -1,0 +1,38 @@
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.prev {
+  left: 100px;
+  transform: rotate(180deg);
+}
+
+.next {
+  right: 100px;
+}
+.roundabout__all.slick-slider {
+  position: relative;
+
+  & .slide {
+    transform: scale(0.5);
+    transition: transform 300ms;
+    opacity: 0.5;
+  }
+
+  & .slide img {
+    width: 570px;
+    margin: 0 auto;
+  }
+
+  & .activeSlide {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}

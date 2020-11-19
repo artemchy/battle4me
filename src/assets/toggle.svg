@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="26px" viewBox="0 0 44 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 28</title>
+    <defs>
+        <linearGradient x1="143.443196%" y1="100%" x2="143.443196%" y2="252.512461%" id="linearGradient-1">
+            <stop stop-color="#0B8FB7" offset="0%"></stop>
+            <stop stop-color="#C90F67" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="31" cy="11" r="8"></circle>
+        <filter x="-37.5%" y="-37.5%" width="175.0%" height="175.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0450362489   0 0 0 0 0.561960757   0 0 0 0 0.718992233  0 0 0 0.563319493 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_W(video-fon)-Icon2" transform="translate(-1441.000000, -12.000000)">
+            <g id="Group-2" transform="translate(1350.000000, 12.000000)">
+                <g id="Group-28" transform="translate(91.000000, 2.000000)">
+                    <rect id="Rectangle-14" stroke="#191535" opacity="0.2" fill-rule="nonzero" x="0.5" y="0.5" width="41" height="21" rx="10.5"></rect>
+                    <g id="Oval-4" transform="translate(31.000000, 11.000000) rotate(91.000000) translate(-31.000000, -11.000000) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

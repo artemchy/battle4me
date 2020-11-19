@@ -1,0 +1,1 @@
+export const getLenguage = (state) => state.app.lenguage 

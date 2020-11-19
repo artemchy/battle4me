@@ -1,0 +1,98 @@
+.contactsPage {
+  display: flex;
+  padding: 200px 0 120px;
+  background-image: url("../../assets/contacts-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoHeader div {
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: block;
+  width: 270px;
+  height: 2px;
+  margin: 35px 0;
+  background: #15c9ff;
+}
+
+.contacts p {
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.contacts p span {
+  padding-left: 10px;
+}
+
+.location {
+  align-self: flex-start;
+
+  & .pos {
+    padding-left: 10px;
+  }
+}
+
+.modal {
+  width: 50%;
+}
+
+.main {
+  position: relative;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.borderTop {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 30%;
+  height: 20%;
+  border-radius: 8px;
+  background: #15c9ff;
+  z-index: -1;
+}
+
+.borderBottom {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 70%;
+  height: 60%;
+  border-radius: 8px;
+  background: #15c9ff;
+  z-index: -1;
+}
+
+.item {
+  border-radius: 8px;
+  background: #191831;
+  padding: 69px 70px 84px 60px;
+  z-index: 1;
+}
+
+.title {
+
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.form {
+  padding-top: 48px;
+  & textarea {
+    height: 97px; 
+  }
+}

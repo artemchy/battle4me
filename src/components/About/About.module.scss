@@ -1,0 +1,52 @@
+.about {
+  background: url("../../assets/about-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 100%;
+  padding-top: 200px;
+}
+
+.pictures {
+  display: flex;
+  padding: 60px 0 135px 0;
+  gap: 30px;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & * {
+    border-radius: 4px;
+  }
+
+  & .item, .blue, .pink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    max-height: 351px;
+    min-height: 245px;
+    border-radius: 4px;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+}
+
+
+.blue {
+  background: #0b8fb7;
+}
+
+.pink {
+  background: #c90f67;
+}

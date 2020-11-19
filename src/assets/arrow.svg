@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 10</title>
+    <defs>
+        <polygon id="path-1" points="17.18 34.68 26.34 25.5 17.18 16.32 20 13.5 32 25.5 20 37.5"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Battle-page" transform="translate(-1472.000000, -1595.000000)">
+            <g id="Group-10" transform="translate(1472.000000, 1595.000000)">
+                <circle id="Oval" fill="#23203A" cx="30" cy="30" r="30"></circle>
+                <g id="Icon-/-Keyboard-Arrow---Up-/-Filled" transform="translate(6.000000, 4.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero" transform="translate(24.590000, 25.500000) rotate(-90.000000) translate(-24.590000, -25.500000) "></g>
+                    <g id="✱-/-Color-/-Icons-/-Selected-/-On-Surface-/-Inactive-Copy-8" mask="url(#mask-2)" fill="#15C9FF" fill-rule="evenodd">
+                        <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
