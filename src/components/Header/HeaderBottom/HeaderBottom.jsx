@@ -6,10 +6,12 @@ import { FiSearch } from "react-icons/fi";
 import { BsBell } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { SearchForm } from "./SearchForm/SeachForm";
+import { useApp } from "../../../AppContext";
 
 export const HeaderBottom = () => {
   const [isShow, setShowSearchForm] = useState(false);
   const [scroll, setSctroll] = useState(false);
+  const lightMode = useApp()
 
   const checkScrollTop = () => {
     if (!scroll && window.pageYOffset > 400) {
@@ -18,6 +20,7 @@ export const HeaderBottom = () => {
       setSctroll(false);
     }
   };
+  const showSearch = () => setShowSearchForm(true);
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop);
@@ -27,10 +30,10 @@ export const HeaderBottom = () => {
     };
   }, []);
 
-  const showSearch = () => setShowSearchForm(true);
+
 
   return (
-    <div className={"header-bottom"}>
+    <div className={`header-bottom${lightMode && !scroll && "__lightMode"}`}>
       <div className="container">
         <div className={"header-bottom__wrapper"}>
           <div className={"header-bottom__logo"}>

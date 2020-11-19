@@ -1,4 +1,10 @@
 .header-bottom {
+  background: transparent;
+
+  &__lightMode {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
