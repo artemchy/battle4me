@@ -5,8 +5,11 @@ import { HiOutlineMail } from "react-icons/hi";
 import { RiEarthLine } from "react-icons/ri";
 import { MdLocationOn } from "react-icons/md";
 import { SocialIcons } from "../SocialIcons/SocialIcons";
+import { useApp } from "../../AppContext";
 
 export const Contacts = () => {
+  const lightMode = useApp();
+  
   return (
     <div className={classes.contactsPage}>
       <div className="container">

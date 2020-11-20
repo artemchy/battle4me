@@ -9,7 +9,7 @@ const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_LENGUAGE: 
             return {
-                ...state, lenguage: action.lenguage === 'ru' ? 'Рус' : "Eng"
+                ...state, lenguage: action.lenguage === 'Ru' ? 'Рус' : "Eng"
             }
         
         default:

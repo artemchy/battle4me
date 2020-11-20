@@ -22,17 +22,19 @@ const Item = styled.li`
   max-width: calc(25% - 30px);
   padding: 0 15px;
   text-align: center;
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: ${({ lightMode }) => (lightMode ? "#06021d" : "#f2f2f2")};
+  }
 `;
 
 const Title = styled.div`
   margin: 36px 0 12px 0;
   font-size: 1.5rem;
   line-height: 30px;
-`;
-
-const P = styled.p`
-  font-size: 16px;
-  line-height: 24px;
+  color: ${({ lightMode }) => (lightMode ? "#06021d" : "#f2f2f2")};
 `;
 
 export const HowItWorks = () => {
@@ -47,31 +49,31 @@ export const HowItWorks = () => {
           to!
         </p>
         <Items>
-          <Item>
+          <Item lightMode={lightMode}>
             <img src={lightMode ? okLg : ok} alt="" />
-            <Title>Join a Battle</Title>
-            <P>
+            <Title lightMode={lightMode}>Join a Battle</Title>
+            <p>
               Pick and choose from a selection of battles and click join to get
               started!
-            </P>
+            </p>
           </Item>
-          <Item>
+          <Item lightMode={lightMode}>
             <img src={lightMode ? playLg : play} alt="" />
-            <Title>Create a Video</Title>
-            <P>15 seconds is what you need to create awesomeness!</P>
+            <Title lightMode={lightMode}>Create a Video</Title>
+            <p>15 seconds is what you need to create awesomeness!</p>
           </Item>
-          <Item>
+          <Item lightMode={lightMode}>
             <img src={lightMode ? goodLg : good} alt="" />
-            <Title>Collect Votes</Title>
-            <P>
+            <Title lightMode={lightMode}>Collect Votes</Title>
+            <p>
               Share your video to the world and collect votes. The bigger the
               tribe, the better!
-            </P>
+            </p>
           </Item>
-          <Item>
+          <Item lightMode={lightMode}>
             <img src={lightMode ? rocketLg : rocket} alt="" />
-            <Title>Be a Winner!</Title>
-            <P>Highest amount of love and votes wins you epic prizes!</P>
+            <Title lightMode={lightMode}>Be a Winner!</Title>
+            <p>Highest amount of love and votes wins you epic prizes!</p>
           </Item>
         </Items>
       </div>

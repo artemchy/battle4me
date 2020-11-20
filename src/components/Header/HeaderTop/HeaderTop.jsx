@@ -3,10 +3,8 @@ import styled from "styled-components";
 import toggleButton from "../../../assets/toggle.svg";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { SocialIcons } from "../../SocialIcons/SocialIcons";
-import { useDispatch, useSelector } from "react-redux";
-import { getLenguage } from "../../../redux/selectors";
+import { useDispatch } from "react-redux";
 import { changeLenguage } from "../../../redux/app-reducer";
-import { useApp, useAppToggle } from "../../../AppContext";
 
 const Header = styled.header`
   display: flex;
@@ -92,17 +90,14 @@ const LenguageModal = styled.ul`
   }
 `;
 
-export const HeaderTop = () => {
+export const HeaderTop = ({lightMode, toggle, lenguage}) => {
   const [isShow, setShow] = useState(false);
-  const lightMode = useApp();
-  const toggle = useAppToggle();
   const dispatch = useDispatch();
-  const lenguage = useSelector(getLenguage);
   const selectLenguage = (selectLenguage) => {
     dispatch(changeLenguage(selectLenguage));
     setShow(false);
   };
-
+debugger;
   return (
     <Header lightMode={lightMode}>
       <div className="container">
@@ -115,7 +110,6 @@ export const HeaderTop = () => {
                   <span>
                     <FaApple size={18} />
                   </span>
-
                   <Title>App Store</Title>
                 </a>
               </li>
@@ -132,7 +126,8 @@ export const HeaderTop = () => {
             </Shops>
             <Settings lightMode={lightMode}>
               <li onClick={toggle}>
-                <span>{lightMode ? "Ligth Mode" : "Dark Mode"}</span>
+                {lenguage === "Рус" && lightMode ? <span>Дневной режим</span> : <span>Ночной режим</span> 
+                && lenguage === "Eng" && lightMode ? <span>Light Mode</span> : <span>Dark Mode</span>} 
                 <ToggleButton src={toggleButton} lightMode={lightMode} alt="" />
               </li>
               <span className="divider" />
@@ -144,7 +139,7 @@ export const HeaderTop = () => {
                     onMouseLeave={() => setShow(false)}
                   >
                     <li onClick={() => selectLenguage("eng")}>Eng</li>
-                    <li onClick={() => selectLenguage("ru")}>Рус</li>
+                    <li onClick={() => selectLenguage("Ru")}>Рус</li>
                   </LenguageModal>
                 )}
               </li>

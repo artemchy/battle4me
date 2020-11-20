@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink, Route } from "react-router-dom";
 import { useApp } from "../../AppContext";
+import { getLenguage } from "../../redux/selectors";
 import { AllBattle } from "./All/AllBattle";
 import "./Battle.scss";
 import { CurrentBattle } from "./Current/CurrentBattle";
@@ -8,10 +10,11 @@ import { PastBattle } from "./Past/PastBattle";
 
 export const BattlePage = () => {
   const lightMode = useApp();
+  const lenguage = useSelector(getLenguage);
   return (
     <section>
       <div className="container">
-        <h1 className="title">Battle</h1>
+        <h1 className="title">{lenguage === "Eng" ? "Battle" : "Баттлы"}</h1>
         <p className="subtitle">
           Use the best of your talent and imagination to create captivating
           short videos that win you epic prizes!

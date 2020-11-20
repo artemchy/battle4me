@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { useApp } from "../../AppContext";
+import { getLenguage } from "../../redux/selectors";
 
 export const Filters = () => {
   const lightMode = useApp();
-  
+  const lenguage = useSelector(getLenguage);
   const Body = styled.div`
     padding: 60px;
     background: ${({ lightMode }) =>
@@ -49,34 +51,44 @@ export const Filters = () => {
       <Body lightMode={lightMode}>
         <Items lightMode={lightMode}>
           <li>
-            <button>Sports/Activities</button>
+            <button>
+              {lenguage === "Eng" ? "Sports/Activities" : "Спорт"}
+            </button>
           </li>
           <li>
-            <button>Health & Wellness</button>
+            <button>
+              {lenguage === "Eng" ? "Health & Wellness" : "Здоровье"}
+            </button>
           </li>
           <li>
-            <button>Lifestyle</button>
+            <button>{lenguage === "Eng" ? "Lifestyle" : "Образ жизни"}</button>
           </li>
           <li>
-            <button>Gaming & Toys</button>
+            <button>{lenguage === "Eng" ? "Gaming & Toys" : "Игры"}</button>
           </li>
           <li>
-            <button>Travel Experiences</button>
+            <button>
+              {lenguage === "Eng" ? "Travel Experiences" : "Путешествия"}
+            </button>
           </li>
           <li>
-            <button>Dining Experiences</button>
+            <button>
+              {lenguage === "Eng" ? "Dining Experiences" : "Питания"}
+            </button>
           </li>
           <li>
-            <button>Electronics</button>
+            <button>{lenguage === "Eng" ? "Electronics" : "Техника"}</button>
           </li>
           <li>
-            <button>Entertainment</button>
+            <button>
+              {lenguage === "Eng" ? "Entertainment" : "Развлечения"}
+            </button>
           </li>
           <li>
-            <button>Fashion</button>
+            <button>{lenguage === "Eng" ? "Fashion" : "Мода"}</button>
           </li>
           <li>
-            <button>Others</button>
+            <button>{lenguage === "Eng" ? "Others" : "Другое"}</button>
           </li>
         </Items>
       </Body>

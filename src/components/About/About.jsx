@@ -1,15 +1,20 @@
 import React from "react";
 import classes from "./About.module.scss";
+import { useApp } from "../../AppContext";
 import pic1 from "../../assets/about-01.jpg";
 import pic2 from "../../assets/about-02.jpg";
 import pic3 from "../../assets/about-03.jpg";
 import pic4 from "../../assets/about-04.jpg";
 
+
 export const About = () => {
+  const lightMode = useApp();
   return (
     <div className={classes.about}>
-      <h1 className="title">What is Battle4.me?</h1>
-      <div className="subtitle">
+      <h1 className={classes.title}>
+        What is Battle4.me?
+      </h1>
+      <div className={classes.subtitle}>
         Battle4.me is a platform for users to challenge their creativity through
         video battles and get rewarded for their popular content.
       </div>

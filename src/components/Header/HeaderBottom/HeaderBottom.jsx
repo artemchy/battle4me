@@ -6,12 +6,10 @@ import { FiSearch } from "react-icons/fi";
 import { BsBell } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { SearchForm } from "./SearchForm/SeachForm";
-import { useApp } from "../../../AppContext";
 
-export const HeaderBottom = () => {
+export const HeaderBottom = ({ lightMode, lenguage }) => {
   const [isShow, setShowSearchForm] = useState(false);
   const [scroll, setSctroll] = useState(false);
-  const lightMode = useApp()
 
   const checkScrollTop = () => {
     if (!scroll && window.pageYOffset > 400) {
@@ -29,8 +27,6 @@ export const HeaderBottom = () => {
       window.removeEventListener("scroll", checkScrollTop);
     };
   }, []);
-
-
 
   return (
     <div className={`header-bottom${lightMode && !scroll && "__lightMode"}`}>
@@ -53,10 +49,14 @@ export const HeaderBottom = () => {
                 )}
               </li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/about">
+                  {lenguage === "Eng" ? "About Us" : "О нас"}
+                </Link>
               </li>
               <li>
-                <Link to="/contacts">Contact Us</Link>
+                <Link to="/contacts">
+                  {lenguage === "Eng" ? "Contacts Us" : "Контакты"}
+                </Link>
               </li>
               <li>
                 <div>
@@ -69,12 +69,14 @@ export const HeaderBottom = () => {
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     <AiOutlineUser size={24} />
-                    <span style={{ marginLeft: "6px" }}>Sign In</span>
+                    <span style={{ marginLeft: "6px" }}>
+                      {lenguage === "Eng" ? "Sign In" : "Войти"}
+                    </span>
                   </Link>
                 </span>
               </li>
             </ul>
-            <button className="btn__style1">Battle</button>
+            <button className="btn__style1">{lenguage === "Eng" ? "Battle" : "Участвовать"}</button>
           </nav>
         </div>
       </div>
